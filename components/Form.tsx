@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import {Text , StyleSheet , View , ScrollView , ToastAndroid , BackHandler} from 'react-native'
 import {useState  , useEffect} from 'react';
 import { Button, FormControl, Heading, Input } from 'native-base';
@@ -18,6 +19,7 @@ const BalloonFrom= props=>{
     })
 
     const chekFromApi =()=>{
+        ToastAndroid.show("Fetching..." , ToastAndroid.SHORT);
         const data = {username , password}
         fetch('https://dummyjson.com/auth/login' , {
             method:'POST',
@@ -36,6 +38,7 @@ const BalloonFrom= props=>{
         <ScrollView style={styles.elementContainer} contentContainerStyle={{
             alignItems:'center',
             justifyContent:'center',}} >
+                <StatusBar style="dark" />
         <View style={styles.formHolder}>
             <Heading textAlign='center'>Form</Heading>
             <FormControl>

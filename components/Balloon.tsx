@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar'
 import { Animated, RefreshControl, RefreshControlBase, ScrollView, StyleSheet, Text, View,Image } from 'react-native';
 import Svg , { Circle , SvgUri , Path , SvgXml,Line} from 'react-native-svg';
 import LOGO from ".././assets/inflated.svg"
@@ -15,7 +15,6 @@ const Balloon =props=>{
         <StatusBar style="dark" />
 
         <RefreshControl refreshing  onRefresh={()=>console.log("refresh...  ")} />
-          <Text>This is the  view element</Text>
         <Animated.ScrollView style = {{...styles.view , width : 400 , height : 400}} scrollEnabled >
           <LOGO width={400} height={400} />
       
