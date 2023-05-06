@@ -5,22 +5,12 @@ import LOGO from "./assets/inflated.svg"
 import { NativeBaseProvider } from 'native-base';
 import { useRef } from 'react';
 import { TouchableOpacity } from 'react-native';
+import { useAnimatedProps } from 'react-native-reanimated';
 
 export default function App() {
-  console.log(LOGO)
-
-
-  var flateSize = useRef(new Animated.Value(400)).current
-
-  const shrinkBalloon = ()=>{
-    console.log("hello how ")
-    Animated.timing(flateSize , {
-      toValue:100,
-      duration:3000,
-      useNativeDriver:false
-    }).start()
-  };
-
+  
+  // const AnimatedBalloon = Animated.createAnimatedComponent(LOGO);
+  // const animatedProps = useAnimatedProps()
 
   return (
     // <NativeBaseProvider>
@@ -29,11 +19,11 @@ export default function App() {
         <StatusBar style="dark" />
         <RefreshControl refreshing  onRefresh={()=>console.log("refresh...  ")} />
           <Text>This is the  view element</Text>
-        <Animated.ScrollView style = {{...styles.view , width : flateSize , height : flateSize}} scrollEnabled >
+        <Animated.ScrollView style = {{...styles.view , width : 400 , height : 400}} scrollEnabled >
           <LOGO width={400} height={400} />
       
         </Animated.ScrollView >
-        <TouchableOpacity onPress={()=>shrinkBalloon()}>
+        <TouchableOpacity onPress={()=>null}>
           <View style={styles.flatButton}>
           <Text style={{fontSize:30 , marginHorizontal:30 , marginVertical:10}}>Hello</Text>
           </View>
