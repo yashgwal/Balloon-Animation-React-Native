@@ -2,10 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { Animated, RefreshControl, RefreshControlBase, ScrollView, StyleSheet, Text, View,Image } from 'react-native';
 import Svg , { Circle , SvgUri , Path , SvgXml,Line} from 'react-native-svg';
 import LOGO from ".././assets/inflated.svg"
-import { Link, NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import { useRef } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { useAnimatedProps } from 'react-native-reanimated';
+import {Link} from 'react-router-native';
 
 const Balloon =props=>{
     return (
@@ -26,7 +27,7 @@ const Balloon =props=>{
         </TouchableOpacity>
         <TouchableOpacity>
           <View style={styles.flatButton}>
-          <Link to={`/from`}><Text style={{fontSize:30 , marginHorizontal:30 , marginVertical:10}}>From</Text></Link>
+          <Link to={`/form`}><Text style={{fontSize:30 , marginHorizontal:30 , marginVertical:10}}>From</Text></Link>
           </View>
         </TouchableOpacity>
       </View>
