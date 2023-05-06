@@ -17,6 +17,7 @@ export default function App() {
       <View style={styles.container}>
         <Text selectable style={styles.headingTitle} >Baloon Animation</Text> 
         <StatusBar style="dark" />
+        
         <RefreshControl refreshing  onRefresh={()=>console.log("refresh...  ")} />
           <Text>This is the  view element</Text>
         <Animated.ScrollView style = {{...styles.view , width : 400 , height : 400}} scrollEnabled >
