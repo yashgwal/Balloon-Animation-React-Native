@@ -8,28 +8,31 @@
     },
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/inflated.svg",
+    "icon": "./assets/inflated.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/inflated.svg",
+      "image": "./assets/inflated.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/inflated.svg",
+        "foregroundImage": "./assets/inflated.png",
         "backgroundColor": "#ffffff",
         "package": "com.yashGwal.balloonInfaltion"
-      }
+      },
+      "package": "com.yashgwal.balloon"
     },
     "web": {
-      "favicon": "./assets/inflated.svg"
+      "favicon": "./assets/inflated.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1de3f964-9df8-4386-b717-65cbf454deec"
+      }
     }
   }
 }
